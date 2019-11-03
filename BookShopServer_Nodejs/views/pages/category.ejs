@@ -1,0 +1,67 @@
+<div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+
+                <form action="" method="POST" class="mt-4">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Title</label>
+                        <input type="text" name="txtTitle" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter title">
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Order</label>
+                        <input type="text" name="txtOrder" class="form-control" id="exampleInputPassword1" placeholder="Enter Order">
+                    </div>
+                    <div class="custom-control custom-checkbox mr-sm-2 mb-3">
+                        <input type="checkbox" class="custom-control-input" id="checkbox0" value="check">
+                        <label class="custom-control-label" for="checkbox0">Show/Hide</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add new category</button>
+                </form>
+            </div>
+        </div>
+</div>
+
+<% if(typeof message != 'undefined') { %><h3><%- message %></h3><% } %>
+
+<div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Category List </h4>
+                
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Order</th>
+                                <th>Title</th>
+                                <th>Active</th>
+                                <th>Books</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        <% categories.forEach(function(cat){ %>
+                            <tr>
+                                    <td><a href="javascript:void(0)">#<%- cat._id %></a></td>
+                                    <td><%- cat.title %></td>
+                                    <td><span class="text-muted"><i class="fa fa-clock-o"></i> 
+                                        <% if(cat.active==1){ %>Show<% }else{ %>Hide<% } %>
+                                        </span> </td>
+                                    <td></td>
+                                    <td>
+                                            <button type="button" class="btn waves-effect waves-light btn-success">Edit</button>
+                                            <button type="button" class="btn waves-effect waves-light btn-danger">Delete</button>
+                                    </td>                           
+                            </tr>
+                        <% }); %>
+                        
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>

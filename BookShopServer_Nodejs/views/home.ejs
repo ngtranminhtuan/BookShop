@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./blocks/head.ejs") %>
+
+<body class="skin-blue fixed-layout">
+  
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">Elite admin</p>
+        </div>
+    </div>
+    <div id="main-wrapper">
+      
+        <%- include("./blocks/header.ejs") %>
+     
+        <%- include("./blocks/left.ejs") %>
+      
+        <div class="page-wrapper">
+          
+            <div class="container-fluid">
+             
+                <div class="row page-titles">
+                    <div class="col-md-5 align-self-center">
+                        <h4 class="text-themecolor">Blank Page</h4>
+                    </div>                    
+                </div>
+              
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <%- include("./pages/"+ page +".ejs") %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            
+        </div>
+       
+        <footer class="footer">
+            © 2019 Eliteadmin by themedesigner.in
+        </footer>
+      
+    </div>
+   
+    <%- include("./blocks/script_bottom.ejs") %>
+</body>
+
+</html>

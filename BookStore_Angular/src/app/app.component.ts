@@ -1,0 +1,14 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'BookStore';
+  constructor(){
+    localStorage.removeItem("Banner-1");
+    localStorage.removeItem("Banner-2");
+  }
+}

@@ -1,0 +1,26 @@
+<div class="card mb-4 shadow-sm">
+    <div class="card-header">
+      <h4 class="my-0 font-weight-normal">{{ titleCate }}</h4>
+    </div>
+    <div class="card-body" style="padding-top:0px!important">
+
+    <div class="row">
+
+      <div *ngFor="let book of dsBooks" class="col-lg-4">
+          <div class="card" style="border:none; margin-top: 20px;">
+              <img src="http://localhost:3000/upload/{{book.image}}" routerLink="/detail/{{book._id}}" class="card-img-top ebook book">
+              <div class="card-body">
+              </div>
+          </div>
+      </div>
+
+</div>
+
+
+    </div>
+</div>
+
+
+
+
+

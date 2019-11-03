@@ -1,0 +1,22 @@
+.logo{width:80%}
+menu {
+  padding-inline-start: 0px;
+}
+
+.card{margin-bottom: 30px;}
+.card-img-top{width:50%!important; margin:auto; padding-top:20px!important}
+.book{cursor: pointer;}
+.xanh{color:dodgerblue; text-align: center;}
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}

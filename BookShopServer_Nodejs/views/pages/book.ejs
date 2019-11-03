@@ -1,0 +1,78 @@
+<div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+
+                <form action="" method="POST" enctype="multipart/form-data" class="mt-4">
+                    
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Category</label>
+                        <select name="selectCate">
+                            <% cats.forEach(function(cat){ %>
+                                <option value="<%- cat._id %>"><%- cat.title %></option>
+                            <% }) %>                            
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Title</label>
+                        <input type="text" name="txtTitle" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter title">
+                        
+                    </div>
+
+                    <div class="form-group">
+                            <label for="exampleInputEmail1">Image</label>
+                            <input type="file" name="fileImage" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">                            
+                    </div>
+
+                    <div class="form-group">
+                            <label for="exampleInputPassword1">Pdf url</label>
+                            <input type="text" name="txtPdf" class="form-control" id="exampleInputPassword1" placeholder="Pdf url">
+                    </div>
+
+                    <div class="form-group">
+                            <label for="exampleInputPassword1">Description</label>
+                            <textarea name="txtPdfurl" class="form-control"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Order</label>
+                        <input type="text" name="txtOrder" class="form-control" id="exampleInputPassword1" placeholder="Enter Order">
+                    </div>
+                    <div class="custom-control custom-checkbox mr-sm-2 mb-3">
+                        <input type="checkbox" class="custom-control-input" id="checkbox0" value="check">
+                        <label class="custom-control-label" for="checkbox0">Show/Hide</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add new category</button>
+                </form>
+            </div>
+        </div>
+</div>
+
+
+<div class="card">
+    <div class="card-body p-b-0">
+        <h4 class="card-title">Books</h4>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs customtab" role="tablist">
+        <% 
+        var n=0;
+        cats.forEach(function(cat){ n++; %>
+        <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#home<%- n %>" role="tab" aria-selected="false"><span class="hidden-sm-up"><i class="ti-home"></i></span> <span class="hidden-xs-down">Home</span></a> </li>
+        <% }) %>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <% 
+        var n=0;
+        cats.forEach(function(cat){ n++; %>
+        <div class="tab-pane" id="home<%- n %>" role="tabpanel">
+            <div class="p-20">
+                <h3><%- n %></h3>
+                <h4>you can use it with the small code</h4>
+                <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a.</p>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+</div>
